@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Thot-Light – 3 semaines d'essai gratuit</title>
+<meta name="description" content="Thot-Light est maintenant en vente. Testez une pyramide chez vous pendant trois semaines, gratuitement : chambre à coucher ou salon.">
+<meta property="og:title" content="Thot-Light – 3 semaines d'essai gratuit">
+<meta property="og:description" content="Thot-Light est maintenant en vente. Testez une pyramide chez vous pendant trois semaines, gratuitement : chambre à coucher ou salon.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#10132b">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: same night-sky identity as the product page; one centered launch hero, then a 3-step trial sequence, the two rooms, the conditions and a closing call to action. Single deliberate dark look. */
+:root{
+  --night:#10132b; --night2:#181c3d; --ink:#ece4cd; --muted:#a9a28e; --gold:#c9a95c; --line:rgba(201,169,92,.28);
+  --display:"Cormorant Garamond",Georgia,serif; --body:"Jost","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--ink);font-family:var(--body);font-weight:300;font-size:17px;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(clamp(16px,5vw,56px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,5vw,56px),env(safe-area-inset-right,0px))}
+nav{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-block:22px;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)}
+nav .rt{display:flex;align-items:center;gap:14px}
+nav a{color:var(--gold);text-decoration:none;border:1px solid var(--line);padding:8px 16px;border-radius:40px;white-space:nowrap}
+nav a:hover,nav a:focus-visible{background:var(--gold);color:var(--night);outline:none}
+nav .lg{font:inherit;font-size:13px;letter-spacing:.12em;text-transform:none;background:var(--night2);color:var(--gold);border:1px solid var(--line);border-radius:40px;padding:8px 14px;cursor:pointer}
+@media (max-width:520px){nav{letter-spacing:.06em;font-size:11px}nav .rt{gap:6px}nav a{padding:8px 10px}nav .lg{font-size:12px;letter-spacing:.04em;padding:8px}}
+@media (max-width:400px){nav>span:first-child{display:none}nav{justify-content:flex-end}}
+.hero{text-align:center;padding-block:10px 70px}
+.hero canvas{width:min(380px,80vw);aspect-ratio:1;max-width:100%;display:block;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:40px;padding:6px 16px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(48px,10vw,100px);letter-spacing:.05em;margin:14px 0 4px;line-height:1}
+.tag{font-family:var(--display);font-style:italic;font-size:clamp(18px,2.6vw,22px);color:#d8cba8;margin:0 auto}
+.big{font-family:var(--display);font-weight:600;font-size:clamp(30px,5vw,48px);line-height:1.12;margin:26px auto 12px;max-width:20ch;text-wrap:balance}
+.lead{max-width:52ch;margin:0 auto;color:var(--ink)}
+.acts{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
+.cta{display:inline-block;background:var(--gold);color:var(--night);text-decoration:none;padding:14px 30px;border-radius:40px;font-weight:500;letter-spacing:.08em}
+.cta:hover,.cta:focus-visible{background:var(--ink);outline:none}
+.cta.alt{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.cta.alt:hover,.cta.alt:focus-visible{background:var(--gold);color:var(--night)}
+section{padding-block:60px;border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(30px,4vw,40px);margin:0 0 24px;text-wrap:balance}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:s}
+.steps li{counter-increment:s;border:1px solid var(--line);border-radius:6px;padding:22px;background:var(--night2);min-width:0}
+.steps li::before{content:counter(s);display:block;font-family:var(--display);font-size:52px;line-height:1;color:var(--gold);margin-bottom:10px;font-variant-numeric:lining-nums}
+.rooms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.room{border:1px solid var(--gold);border-radius:8px;padding:26px;background:linear-gradient(135deg,rgba(201,169,92,.13),var(--night2) 60%);min-width:0}
+.room .n{color:var(--gold);font-family:var(--display);font-size:22px}
+.room h3{font-family:var(--display);font-size:32px;font-weight:600;margin:2px 0 6px}
+.room p{margin:0;color:var(--muted)}
+.cond{margin:0;padding-left:1.6em;display:grid;gap:10px}
+.cond li::marker{color:var(--gold);font-weight:500}
+.end{text-align:center}
+.end h2{margin-bottom:12px}
+.end p{max-width:52ch;margin:0 auto;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:var(--muted)}
+@media (max-width:760px){.steps{grid-template-columns:minmax(0,1fr)}.steps li{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline}.steps li::before{margin:0;font-size:40px}}
+@media (max-width:560px){.rooms{grid-template-columns:minmax(0,1fr)}.acts .cta{width:100%;text-align:center}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><span>ADPS</span><span class="rt"><select id="lang" class="lg" aria-label="Langue / Language"><option value="fr">Français</option><option value="pt">Português</option><option value="de">Deutsch</option><option value="en">English</option><option value="es">Español</option><option value="it">Italiano</option></select><a class="tl" data-h="" href="../">Découvrir le produit</a></span></nav>
+
+  <header class="hero">
+    <canvas id="pyr" width="680" height="680" aria-hidden="true"></canvas>
+    <span class="eyebrow">Lancement de la vente</span>
+    <h1>THOT-LIGHT</h1>
+    <p class="tag">Pyramide de purification et d'harmonisation énergétique</p>
+    <p class="big">Testez la pyramide trois semaines, gratuitement</p>
+    <p class="lead">Thot-Light est maintenant en vente. Pour le lancement, vous pouvez tester une pyramide chez vous pendant trois semaines, sans frais.</p>
+    <div class="acts"><a class="cta tl" data-h="#essai" href="../#essai">Réserver mon test gratuit</a><a class="cta alt tl" data-h="" href="../">Découvrir la pyramide</a></div>
+  </header>
+
+  <section>
+    <h2>Comment se déroule le test</h2>
+    <ol class="steps">
+      <li><span>Choisissez la pièce : chambre à coucher ou salon.</span></li>
+      <li><span>Nous vous livrons une pyramide Home, prête à être activée.</span></li>
+      <li><span>Après trois semaines, vous décidez de la garder ou de nous la renvoyer.</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Une pièce au choix</h2>
+    <div class="rooms">
+      <div class="room"><span class="n">1.</span><h3>Chambre à coucher</h3><p>Pour un sommeil plus calme et plus réparateur.</p></div>
+      <div class="room"><span class="n">2.</span><h3>Salon</h3><p>Pour une atmosphère plus harmonieuse au quotidien.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Les conditions</h2>
+    <ol class="cond">
+      <li>3 semaines d'essai gratuit</li>
+      <li>Une seule pyramide par foyer</li>
+      <li>Pyramide Home, taille selon la surface de la pièce</li>
+      <li>Inscription sur la page du produit, en bas de page</li>
+    </ol>
+  </section>
+
+  <section class="end">
+    <h2>Prêt à tester Thot-Light chez vous ?</h2>
+    <p>La demande se fait en une minute sur la page du produit : choisissez la pièce, indiquez votre adresse et envoyez.</p>
+    <div class="acts"><a class="cta tl" data-h="#essai" href="../#essai">Réserver mon test gratuit</a></div>
+  </section>
+
+  <footer>Les effets décrits reposent sur l'approche énergétique d'ADPS et sur l'expérience des utilisateurs ; ils ne sont pas démontrés scientifiquement. Thot-Light ne remplace pas un avis, un diagnostic ou un traitement médical.</footer>
+</div>
+
+<script>
+function thotPyramid(c,style){
+  const x=c.getContext('2d'),W=c.width,H=c.height,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const cx=W/2, orbY=H*.30, R=H*.2;                 // halo radius < orbY so circle stays round
+  const apex=[cx,H*.43], base=H*.9, half=W*.36;
+  const stars=Array.from({length:40},(_,i)=>({a:i*2.399,r:R*.6+((i*53)%100)/100*W*.35,s:((i*31)%10)/10}));
+  // Lichtkugel entsteht aus der Spitze: Funken steigen auf, Kugel wächst, Wellen pulsieren (alles innerhalb des Canvas)
+  const ORB=[11,11,12,11][style-1];
+  function halo(t){
+    const p=.5+.5*Math.sin(t/900), r=R*(.85+.15*p);
+    const g=x.createRadialGradient(cx,orbY,0,cx,orbY,r);
+    g.addColorStop(0,'rgba(255,236,180,'+(.55+.25*p)+')');g.addColorStop(.3,'rgba(232,200,120,'+(.22+.12*p)+')');g.addColorStop(1,'rgba(201,169,92,0)');
+    x.fillStyle=g;x.beginPath();x.arc(cx,orbY,r,0,Math.PI*2);x.fill();
+    // Wellen, die aus der Kugel nach außen laufen
+    for(let k=0;k<3;k++){const ph=((t/3200)+k/3)%1, rr=ORB+ph*(R-ORB);x.strokeStyle='rgba(243,226,176,'+(.45*(1-ph))+')';x.lineWidth=1.2;x.beginPath();x.arc(cx,orbY,rr,0,Math.PI*2);x.stroke();}
+    // Funken steigen von der Spitze in die Kugel
+    for(let k=0;k<7;k++){const ph=((t/1800)+k/7)%1, y=apex[1]-ph*(apex[1]-orbY), dx=Math.sin(ph*6+k)*6*(1-ph);
+      x.fillStyle='rgba(255,240,200,'+(.9*Math.sin(ph*Math.PI))+')';x.beginPath();x.arc(cx+dx,y,1.2+1.6*ph,0,Math.PI*2);x.fill();}
+    const s=ORB*(.92+.08*p);
+    const o=x.createRadialGradient(cx-s*.35,orbY-s*.35,1,cx,orbY,s*1.1);o.addColorStop(0,'#fffaf0');o.addColorStop(.6,'#f1d89a');o.addColorStop(1,'#b8913f');
+    x.fillStyle=o;x.beginPath();x.arc(cx,orbY,s,0,Math.PI*2);x.fill();
+  }
+  function beam(t){
+    const p=.5+.5*Math.sin(t/900);
+    const g=x.createLinearGradient(0,apex[1],0,orbY);g.addColorStop(0,'rgba(255,240,200,'+(.8)+')');g.addColorStop(1,'rgba(255,232,170,'+(.15+.2*p)+')');
+    x.fillStyle=g;x.beginPath();x.moveTo(cx-1,apex[1]);x.lineTo(cx+1,apex[1]);x.lineTo(cx+5,orbY);x.lineTo(cx-5,orbY);x.fill();
+    const a=x.createRadialGradient(cx,apex[1],0,cx,apex[1],22);a.addColorStop(0,'rgba(255,240,200,.9)');a.addColorStop(1,'rgba(255,240,200,0)');x.fillStyle=a;x.beginPath();x.arc(cx,apex[1],22,0,Math.PI*2);x.fill();
+  }
+  const lerp=(p,q,t)=>[p[0]+(q[0]-p[0])*t,p[1]+(q[1]-p[1])*t];
+  const poly=(pts)=>{x.beginPath();x.moveTo(...pts[0]);for(let i=1;i<pts.length;i++)x.lineTo(...pts[i]);x.closePath();};
+  const rnd=i=>{const v=Math.sin(i*127.1+311.7)*43758.5453;return v-Math.floor(v);};
+  function eachBlock(A,B,C,n,cb){for(let k=0;k<n;k++){const m=k+1,a1=lerp(A,B,k/n),a2=lerp(A,C,k/n),b1=lerp(A,B,(k+1)/n),b2=lerp(A,C,(k+1)/n);
+    for(let j=0;j<m;j++)cb([lerp(a1,a2,j/m),lerp(a1,a2,(j+1)/m),lerp(b1,b2,(j+1)/m),lerp(b1,b2,j/m)],k,j);}}
+  const geo=()=>({L:[cx-half,base],F:[cx+half*.25,base+H*.02],R:[cx+half,base-H*.03]});
+  function ground(t){}
+  function glyph(type,px,py,s,col){x.strokeStyle=col;x.fillStyle=col;x.lineWidth=1.5;x.beginPath();
+    if(type===0){x.ellipse(px,py,s,s*.5,0,0,Math.PI*2);x.stroke();x.beginPath();x.arc(px,py,s*.25,0,Math.PI*2);x.fill();}
+    else if(type===1){x.arc(px,py,s*.6,0,Math.PI*2);x.stroke();x.beginPath();x.arc(px,py,s*.18,0,Math.PI*2);x.fill();}
+    else if(type===2){x.moveTo(px-s,py);for(let i=1;i<=4;i++)x.lineTo(px-s+i*s/2,py+(i%2?-s*.4:s*.4));x.stroke();}
+    else if(type===3){x.arc(px,py-s*.55,s*.35,0,Math.PI*2);x.moveTo(px,py-s*.2);x.lineTo(px,py+s*.7);x.moveTo(px-s*.4,py+s*.1);x.lineTo(px+s*.4,py+s*.1);x.stroke();}
+    else{x.moveTo(px,py-s*.6);x.lineTo(px+s*.6,py+s*.5);x.lineTo(px-s*.6,py+s*.5);x.closePath();x.stroke();}}
+  function s1(t){ // Pierre dorée: blocs de pierre taillés, deux faces
+    const {L,F,R}=geo();
+    eachBlock(apex,L,F,9,(q,k,j)=>{const v=rnd(k*31+j*7);poly(q);x.fillStyle='hsl(42,58%,'+(50+v*14-k*.8)+'%)';x.fill();x.strokeStyle='rgba(70,45,10,.6)';x.lineWidth=1;x.stroke();});
+    eachBlock(apex,F,R,9,(q,k,j)=>{const v=rnd(k*17+j*13+5);poly(q);x.fillStyle='hsl(38,50%,'+(26+v*10-k*.4)+'%)';x.fill();x.strokeStyle='rgba(15,8,0,.65)';x.lineWidth=1;x.stroke();});
+    x.strokeStyle='rgba(255,240,200,.9)';x.lineWidth=2;x.beginPath();x.moveTo(...apex);x.lineTo(...F);x.stroke();ground(t);
+  }
+  function s2(t){ // Hiéroglyphes: grandes dalles gravées de symboles lumineux
+    const {L,F,R}=geo();const p=.5+.5*Math.sin(t/900);
+    eachBlock(apex,L,F,6,(q,k,j)=>{const v=rnd(k*9+j*5);poly(q);x.fillStyle='hsl(41,62%,'+(46+v*10)+'%)';x.fill();x.strokeStyle='rgba(70,45,10,.7)';x.lineWidth=1.3;x.stroke();
+      if(k>=2&&(k*7+j*3)%3===0){const cxq=(q[0][0]+q[1][0]+q[2][0]+q[3][0])/4,cyq=(q[0][1]+q[1][1]+q[2][1]+q[3][1])/4,w=Math.hypot(q[1][0]-q[0][0],q[1][1]-q[0][1]);
+        glyph((k+j)%5,cxq,cyq,Math.max(7,w*.4),'rgba(255,244,200,'+(.55+.4*p)+')');}});
+    eachBlock(apex,F,R,6,(q,k,j)=>{const v=rnd(k*5+j*11);poly(q);x.fillStyle='hsl(38,50%,'+(25+v*8)+'%)';x.fill();x.strokeStyle='rgba(15,8,0,.7)';x.lineWidth=1.3;x.stroke();
+      if(k>=3&&(k*5+j)%3===1){const cxq=(q[0][0]+q[1][0]+q[2][0]+q[3][0])/4,cyq=(q[0][1]+q[1][1]+q[2][1]+q[3][1])/4,w=Math.hypot(q[1][0]-q[0][0],q[1][1]-q[0][1]);
+        glyph((k*2+j)%5,cxq,cyq,Math.max(5,w*.32),'rgba(232,200,120,'+(.25+.3*p)+')');}});
+    x.strokeStyle='rgba(255,240,200,.9)';x.lineWidth=2;x.beginPath();x.moveTo(...apex);x.lineTo(...F);x.stroke();ground(t);
+  }
+  function s3(t){ // Pyramide à degrés: gradins en pierre dorée, escalier lumineux au centre
+    const N=7,top=apex[1]+9,p=.5+.5*Math.sin(t/900),dx=16,dy=-9;
+    for(let i=N-1;i>=0;i--){const y0=top+(base-top)*i/N,y1=top+(base-top)*(i+1)/N,w=half*(.2+.8*i/(N-1));
+      const g=x.createLinearGradient(cx-w,0,cx+w,0);g.addColorStop(0,'hsl(42,58%,'+(56-i*1.5)+'%)');g.addColorStop(1,'hsl(40,54%,'+(42-i*1.5)+'%)');
+      x.fillStyle=g;x.fillRect(cx-w,y0,2*w,y1-y0);
+      x.fillStyle='hsl(38,48%,'+(24-i)+'%)';poly([[cx+w,y0],[cx+w+dx,y0+dy],[cx+w+dx,y1+dy],[cx+w,y1]]);x.fill();
+      x.fillStyle='hsl(46,66%,'+(66-i)+'%)';poly([[cx-w,y0],[cx+w,y0],[cx+w+dx,y0+dy],[cx-w+dx,y0+dy]]);x.fill();
+      x.strokeStyle='rgba(70,45,10,.65)';x.lineWidth=1;x.strokeRect(cx-w,y0,2*w,y1-y0);
+      const m=Math.max(2,Math.round(w/(half*.14)));x.beginPath();for(let j=1;j<m;j++){const u=cx-w+2*w*(j+(i%2?.5:0))/m;if(u>cx-w&&u<cx+w){x.moveTo(u,y0);x.lineTo(u,y1);}}x.stroke();}
+    const sw=7;x.fillStyle='rgba(255,230,160,'+(.45+.25*p)+')';x.fillRect(cx-sw,top,2*sw,base-top);
+    x.strokeStyle='rgba(120,80,20,.6)';x.lineWidth=1;x.beginPath();for(let y=top+8;y<base;y+=9){x.moveTo(cx-sw,y);x.lineTo(cx+sw,y);}x.stroke();
+    ground(t);
+  }
+  function s4(t){ // Or pur: pyramide dorée lisse, deux faces, arêtes nettes
+    const L=[cx-half,base-H*.015],F=[cx+half*.2,base+H*.07],R=[cx+half,base-H*.05];
+    let g=x.createLinearGradient(L[0],apex[1],F[0],base);g.addColorStop(0,'#f3dc9a');g.addColorStop(.55,'#d2ac55');g.addColorStop(1,'#9a742c');
+    x.fillStyle=g;poly([apex,L,F]);x.fill();
+    g=x.createLinearGradient(F[0],apex[1],R[0],base);g.addColorStop(0,'#8a6a2c');g.addColorStop(1,'#34270f');
+    x.fillStyle=g;poly([apex,F,R]);x.fill();
+    x.lineJoin='round';x.strokeStyle='rgba(255,244,210,.45)';x.lineWidth=1.2;x.beginPath();x.moveTo(...L);x.lineTo(...apex);x.lineTo(...R);x.moveTo(...L);x.lineTo(...F);x.lineTo(...R);x.stroke();
+    x.strokeStyle='rgba(255,246,220,.95)';x.lineWidth=2.2;x.beginPath();x.moveTo(...apex);x.lineTo(...F);x.stroke();
+  }
+  function sky(t){stars.forEach(s=>{const a=.25+.35*Math.abs(Math.sin(t/1500+s.s*6));x.fillStyle='rgba(236,228,205,'+a+')';x.beginPath();x.arc(cx+Math.cos(s.a)*s.r,orbY+H*.25+Math.sin(s.a)*s.r*.55,1.2,0,7);x.fill();});}
+  function draw(t){x.clearRect(0,0,W,H);sky(t);[s1,s2,s3,s4][style-1](t);beam(t);halo(t);if(!reduce)requestAnimationFrame(draw);}
+  draw(0);
+}
+thotPyramid(document.getElementById('pyr'),4);
+</script>
+<script>
+(function(){
+var L={"de": {"Découvrir le produit": "Produkt entdecken", "Testez la pyramide trois semaines, gratuitement": "Testen Sie die Pyramide drei Wochen lang, kostenlos", "Thot-Light est maintenant en vente. Pour le lancement, vous pouvez tester une pyramide chez vous pendant trois semaines, sans frais.": "Thot-Light ist ab sofort erhältlich. Zum Verkaufsstart können Sie eine Pyramide drei Wochen lang kostenlos bei sich zu Hause testen.", "Réserver mon test gratuit": "Kostenlosen Test reservieren", "Découvrir la pyramide": "Die Pyramide entdecken", "Comment se déroule le test": "So läuft der Test ab", "Choisissez la pièce : chambre à coucher ou salon.": "Wählen Sie den Raum: Schlafzimmer oder Wohnzimmer.", "Nous vous livrons une pyramide Home, prête à être activée.": "Wir liefern Ihnen eine Home-Pyramide, bereit zur Aktivierung.", "Après trois semaines, vous décidez de la garder ou de nous la renvoyer.": "Nach drei Wochen entscheiden Sie, ob Sie sie behalten oder an uns zurücksenden.", "Une pièce au choix": "Ein Raum nach Wahl", "Pour un sommeil plus calme et plus réparateur.": "Für einen ruhigeren und erholsameren Schlaf.", "Pour une atmosphère plus harmonieuse au quotidien.": "Für eine harmonischere Atmosphäre im Alltag.", "Les conditions": "Die Bedingungen", "3 semaines d'essai gratuit": "3 Wochen kostenlos testen", "Une seule pyramide par foyer": "Nur eine Pyramide pro Haushalt", "Pyramide Home, taille selon la surface de la pièce": "Home-Pyramide, Größe je nach Fläche des Raumes", "Inscription sur la page du produit, en bas de page": "Anmeldung auf der Produktseite, unten auf der Seite", "Prêt à tester Thot-Light chez vous ?": "Bereit, Thot-Light bei sich zu Hause zu testen?", "La demande se fait en une minute sur la page du produit : choisissez la pièce, indiquez votre adresse et envoyez.": "Die Anfrage dauert eine Minute auf der Produktseite: Raum wählen, Adresse angeben und absenden.", "Lancement de la vente": "Verkaufsstart", "Chambre à coucher": "Schlafzimmer", "Salon": "Wohnzimmer", "Les effets décrits reposent sur l'approche énergétique d'ADPS et sur l'expérience des utilisateurs ; ils ne sont pas démontrés scientifiquement. Thot-Light ne remplace pas un avis, un diagnostic ou un traitement médical.": "Die beschriebenen Wirkungen beruhen auf dem energetischen Ansatz von ADPS und auf den Erfahrungen der Nutzer; sie sind wissenschaftlich nicht belegt. Thot-Light ersetzt keinen ärztlichen Rat, keine Diagnose und keine Behandlung.", "Pyramide de purification et d'harmonisation énergétique": "Pyramide zur energetischen Reinigung und Harmonisierung"}, "en": {"Découvrir le produit": "Discover the product", "Testez la pyramide trois semaines, gratuitement": "Try the pyramid for three weeks, free of charge", "Thot-Light est maintenant en vente. Pour le lancement, vous pouvez tester une pyramide chez vous pendant trois semaines, sans frais.": "Thot-Light is now on sale. For the launch, you can try a pyramid at home for three weeks, free of charge.", "Réserver mon test gratuit": "Book my free trial", "Découvrir la pyramide": "Discover the pyramid", "Comment se déroule le test": "How the trial works", "Choisissez la pièce : chambre à coucher ou salon.": "Choose the room: bedroom or living room.", "Nous vous livrons une pyramide Home, prête à être activée.": "We deliver a Home pyramid, ready to be activated.", "Après trois semaines, vous décidez de la garder ou de nous la renvoyer.": "After three weeks, you decide whether to keep it or send it back to us.", "Une pièce au choix": "One room of your choice", "Pour un sommeil plus calme et plus réparateur.": "For calmer, more restful sleep.", "Pour une atmosphère plus harmonieuse au quotidien.": "For a more harmonious atmosphere every day.", "Les conditions": "The conditions", "3 semaines d'essai gratuit": "3-week free trial", "Une seule pyramide par foyer": "Only one pyramid per household", "Pyramide Home, taille selon la surface de la pièce": "Home pyramid, size according to the room's surface area", "Inscription sur la page du produit, en bas de page": "Sign up on the product page, at the bottom of the page", "Prêt à tester Thot-Light chez vous ?": "Ready to try Thot-Light at home?", "La demande se fait en une minute sur la page du produit : choisissez la pièce, indiquez votre adresse et envoyez.": "The request takes one minute on the product page: choose the room, enter your address and send.", "Lancement de la vente": "Sales launch", "Chambre à coucher": "Bedroom", "Salon": "Living room", "Les effets décrits reposent sur l'approche énergétique d'ADPS et sur l'expérience des utilisateurs ; ils ne sont pas démontrés scientifiquement. Thot-Light ne remplace pas un avis, un diagnostic ou un traitement médical.": "The effects described are based on ADPS's energetic approach and on user experience; they have not been scientifically proven. Thot-Light does not replace medical advice, diagnosis or treatment.", "Pyramide de purification et d'harmonisation énergétique": "Pyramid for energetic purification and harmonisation"}, "es": {"Découvrir le produit": "Descubrir el producto", "Testez la pyramide trois semaines, gratuitement": "Pruebe la pirámide tres semanas, gratis", "Thot-Light est maintenant en vente. Pour le lancement, vous pouvez tester une pyramide chez vous pendant trois semaines, sans frais.": "Thot-Light ya está a la venta. Con motivo del lanzamiento, puede probar una pirámide en su casa durante tres semanas, sin coste.", "Réserver mon test gratuit": "Reservar mi prueba gratuita", "Découvrir la pyramide": "Descubrir la pirámide", "Comment se déroule le test": "Cómo funciona la prueba", "Choisissez la pièce : chambre à coucher ou salon.": "Elija la habitación: dormitorio o salón.", "Nous vous livrons une pyramide Home, prête à être activée.": "Le entregamos una pirámide Home, lista para activar.", "Après trois semaines, vous décidez de la garder ou de nous la renvoyer.": "Después de tres semanas, usted decide si la conserva o nos la devuelve.", "Une pièce au choix": "Una habitación a elegir", "Pour un sommeil plus calme et plus réparateur.": "Para un sueño más tranquilo y reparador.", "Pour une atmosphère plus harmonieuse au quotidien.": "Para un ambiente más armonioso en el día a día.", "Les conditions": "Las condiciones", "3 semaines d'essai gratuit": "3 semanas de prueba gratuita", "Une seule pyramide par foyer": "Una sola pirámide por hogar", "Pyramide Home, taille selon la surface de la pièce": "Pirámide Home, tamaño según la superficie de la habitación", "Inscription sur la page du produit, en bas de page": "Inscripción en la página del producto, al final de la página", "Prêt à tester Thot-Light chez vous ?": "¿Listo para probar Thot-Light en casa?", "La demande se fait en une minute sur la page du produit : choisissez la pièce, indiquez votre adresse et envoyez.": "La solicitud se hace en un minuto en la página del producto: elija la habitación, indique su dirección y envíela.", "Lancement de la vente": "Lanzamiento de la venta", "Chambre à coucher": "Dormitorio", "Salon": "Salón", "Les effets décrits reposent sur l'approche énergétique d'ADPS et sur l'expérience des utilisateurs ; ils ne sont pas démontrés scientifiquement. Thot-Light ne remplace pas un avis, un diagnostic ou un traitement médical.": "Los efectos descritos se basan en el enfoque energético de ADPS y en la experiencia de los usuarios; no están demostrados científicamente. Thot-Light no sustituye el consejo, el diagnóstico ni el tratamiento médico.", "Pyramide de purification et d'harmonisation énergétique": "Pirámide de purificación y armonización energética"}, "it": {"Découvrir le produit": "Scoprire il prodotto", "Testez la pyramide trois semaines, gratuitement": "Provi la piramide per tre settimane, gratis", "Thot-Light est maintenant en vente. Pour le lancement, vous pouvez tester une pyramide chez vous pendant trois semaines, sans frais.": "Thot-Light è ora in vendita. Per il lancio può provare una piramide a casa sua per tre settimane, gratuitamente.", "Réserver mon test gratuit": "Prenotare la mia prova gratuita", "Découvrir la pyramide": "Scoprire la piramide", "Comment se déroule le test": "Come si svolge la prova", "Choisissez la pièce : chambre à coucher ou salon.": "Scelga la stanza: camera da letto o soggiorno.", "Nous vous livrons une pyramide Home, prête à être activée.": "Le consegniamo una piramide Home, pronta per essere attivata.", "Après trois semaines, vous décidez de la garder ou de nous la renvoyer.": "Dopo tre settimane decide se tenerla o rispedircela.", "Une pièce au choix": "Una stanza a scelta", "Pour un sommeil plus calme et plus réparateur.": "Per un sonno più calmo e ristoratore.", "Pour une atmosphère plus harmonieuse au quotidien.": "Per un'atmosfera più armoniosa ogni giorno.", "Les conditions": "Le condizioni", "3 semaines d'essai gratuit": "3 settimane di prova gratuita", "Une seule pyramide par foyer": "Una sola piramide per famiglia", "Pyramide Home, taille selon la surface de la pièce": "Piramide Home, dimensione secondo la superficie della stanza", "Inscription sur la page du produit, en bas de page": "Iscrizione sulla pagina del prodotto, in fondo alla pagina", "Prêt à tester Thot-Light chez vous ?": "Pronto a provare Thot-Light a casa sua?", "La demande se fait en une minute sur la page du produit : choisissez la pièce, indiquez votre adresse et envoyez.": "La richiesta richiede un minuto sulla pagina del prodotto: scelga la stanza, indichi il suo indirizzo e invii.", "Lancement de la vente": "Lancio della vendita", "Chambre à coucher": "Camera da letto", "Salon": "Soggiorno", "Les effets décrits reposent sur l'approche énergétique d'ADPS et sur l'expérience des utilisateurs ; ils ne sont pas démontrés scientifiquement. Thot-Light ne remplace pas un avis, un diagnostic ou un traitement médical.": "Gli effetti descritti si basano sull'approccio energetico di ADPS e sull'esperienza degli utenti; non sono dimostrati scientificamente. Thot-Light non sostituisce il parere, la diagnosi o il trattamento medico.", "Pyramide de purification et d'harmonisation énergétique": "Piramide per la purificazione e l'armonizzazione energetica"}, "pt": {"Découvrir le produit": "Descobrir o produto", "Testez la pyramide trois semaines, gratuitement": "Experimente a pirâmide durante três semanas, gratuitamente", "Thot-Light est maintenant en vente. Pour le lancement, vous pouvez tester une pyramide chez vous pendant trois semaines, sans frais.": "O Thot-Light já está à venda. Para o lançamento, pode experimentar uma pirâmide em casa durante três semanas, sem custos.", "Réserver mon test gratuit": "Reservar o meu teste gratuito", "Découvrir la pyramide": "Descobrir a pirâmide", "Comment se déroule le test": "Como decorre o teste", "Choisissez la pièce : chambre à coucher ou salon.": "Escolha a divisão: quarto ou sala.", "Nous vous livrons une pyramide Home, prête à être activée.": "Entregamos-lhe uma pirâmide Home, pronta a ser ativada.", "Après trois semaines, vous décidez de la garder ou de nous la renvoyer.": "Após três semanas, decide se fica com ela ou se no-la devolve.", "Une pièce au choix": "Uma divisão à escolha", "Pour un sommeil plus calme et plus réparateur.": "Para um sono mais calmo e reparador.", "Pour une atmosphère plus harmonieuse au quotidien.": "Para um ambiente mais harmonioso no dia a dia.", "Les conditions": "As condições", "3 semaines d'essai gratuit": "3 semanas de teste gratuito", "Une seule pyramide par foyer": "Apenas uma pirâmide por agregado familiar", "Pyramide Home, taille selon la surface de la pièce": "Pirâmide Home, tamanho conforme a área da divisão", "Inscription sur la page du produit, en bas de page": "Inscrição na página do produto, no fundo da página", "Prêt à tester Thot-Light chez vous ?": "Pronto para experimentar o Thot-Light em casa?", "La demande se fait en une minute sur la page du produit : choisissez la pièce, indiquez votre adresse et envoyez.": "O pedido demora um minuto na página do produto: escolha a divisão, indique a sua morada e envie.", "Lancement de la vente": "Lançamento da venda", "Chambre à coucher": "Quarto", "Salon": "Sala", "Les effets décrits reposent sur l'approche énergétique d'ADPS et sur l'expérience des utilisateurs ; ils ne sont pas démontrés scientifiquement. Thot-Light ne remplace pas un avis, un diagnostic ou un traitement médical.": "Os efeitos descritos baseiam-se na abordagem energética da ADPS e na experiência dos utilizadores; não estão cientificamente demonstrados. O Thot-Light não substitui um parecer, um diagnóstico ou um tratamento médico.", "Pyramide de purification et d'harmonisation énergétique": "Pirâmide de purificação e harmonização energética"}}, TI={"fr": "Thot-Light – 3 semaines d'essai gratuit", "de": "Thot-Light – 3 Wochen kostenlos testen", "en": "Thot-Light – 3-week free trial", "es": "Thot-Light – 3 semanas de prueba gratuita", "it": "Thot-Light – 3 settimane di prova gratuita", "pt": "Thot-Light – 3 semanas de teste gratuito"}, sel=document.getElementById('lang'), lang='fr';
+function walk(){var w=document.createTreeWalker(document.querySelector('.wrap'),NodeFilter.SHOW_TEXT),n,A=[];while(n=w.nextNode()){if(n.parentNode.closest('script,style,select'))continue;if(n.nodeValue.trim())A.push(n)}
+ A.forEach(function(n){if(n._o===undefined)n._o=n.nodeValue;var t=n._o.trim(),d=L[lang],v=d&&d[t]?d[t]:t;n.nodeValue=n._o.replace(t,function(){return v})})}
+function set(l){lang=L[l]||l==='fr'?l:'fr';document.documentElement.lang=lang;document.title=TI[lang];walk();sel.value=lang;
+ document.querySelectorAll('a.tl').forEach(function(a){a.setAttribute('href','../'+(lang!=='fr'?'?lang='+lang:'')+a.getAttribute('data-h'))});
+ try{localStorage.setItem('tl-lang',lang)}catch(e){}}
+sel.addEventListener('change',function(){set(sel.value)});
+var l='fr';try{var q=/[?&]lang=(de|fr|en|es|it|pt)/.exec(location.search);l=q?q[1]:(localStorage.getItem('tl-lang')||'fr')}catch(e){}
+if(l!=='fr')set(l);
+})();
+</script>
+</body></html>
